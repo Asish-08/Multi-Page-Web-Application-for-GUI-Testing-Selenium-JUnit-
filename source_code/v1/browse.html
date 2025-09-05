@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Browse Pets</title>
+  <link rel="stylesheet" href="style_v1.css">
+  <script src="script_v1.js" defer></script>
+</head>
+<body>
+  <nav>
+    <ul class="navbar">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="browse.html">Browse</a></li>
+      <li><a href="favorites.html">Favorites</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <h1 id="browse-heading">Available Pets</h1>
+  <img src="/images/petgallery.jpg" alt="Pet gallery" class="main-img">
+
+  <p>Below are the available pets:</p>
+  <ul class="pet-list">
+    <li>Charlie 🐶 <button onclick="addToFavorites('Charlie 🐶')">❤️</button></li>
+    <li>Luna 🐱 <button onclick="addToFavorites('Luna 🐱')">❤️</button></li>
+    <li>Peaches 🦜 <button onclick="addToFavorites('Peaches 🦜')">❤️</button></li>
+    <li>Thumper 🐰 <button onclick="addToFavorites('Thumper 🐰')">❤️</button></li>
+    <li>Daisy 🐶 <button onclick="addToFavorites('Daisy 🐶')">❤️</button></li>
+  </ul>
+
+  <label for="friendliness">Level of Friendliness:</label>
+  <input type="range" id="friendliness" min="1" max="5">
+
+  <label for="reason">Why do you want to adopt a pet?</label>
+  <textarea id="reason" rows="6" cols="50" placeholder="Type your reason here..."></textarea>
+
+  <button onclick="goToPage('favorites.html')">go to favorites</button>
+</body>
+</html>

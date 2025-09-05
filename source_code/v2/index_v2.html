@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Pet Adoption V2 - Home</title>
+  <link rel="stylesheet" href="style_v2.css" />
+  <script src="script_v2.js" defer></script>
+</head>
+<body>
+  <nav>
+    <ul class="navbar">
+      <li><a href="index_v2.html">Home</a></li>
+      <li><a href="contact_v2.html">Contact</a></li>
+      <li><a href="browse_v2.html">Browse</a></li>
+      <li><a href="favorites_v2.html">Favorites</a></li>
+      
+    </ul>
+  </nav>
+  <div class="center-container">
+    <header>
+      <h1 class="rotated">Welcome to Pet Haven</h1>
+    </header>
+
+    <img src="/images/catpetimage.jpg" alt="Happy pet" class="fixed-img" />
+
+    <div class="input-group">
+      <label for="newsletter">Join our newsletter:</label>
+      <input type="email" id="newsletter" placeholder="Email" />
+    </div>
+
+    <div class="inline-group">
+      <input type="checkbox" id="agree" />
+      <label for="agree">I agree to the terms</label>
+    </div>
+
+    <p>What kind of pet do you want to adopt?</p>
+    <div class="inline-group">
+      <input type="radio" name="pet" value="dog" id="dog" />
+      <label for="dog">Dog</label>
+
+      <input type="radio" name="pet" value="cat" id="cat" />
+      <label for="cat">Cat</label>
+
+      <input type="radio" name="pet" value="parrot" id="parrot" />
+      <label for="parrot">Parrot</label>
+
+      <input type="radio" name="pet" value="rabbit" id="rabbit" />
+      <label for="rabbit">Rabbit</label>
+    </div>
+
+    <button onclick="goToPage('contact_v2.html')">Contact Us</button>
+  </div>
+</body>
+</html>

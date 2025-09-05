@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Browse Pets V2</title>
+  <link rel="stylesheet" href="style_v2.css" />
+  <script src="script_v2.js" defer></script>
+</head>
+<body>
+  <nav>
+    <ul class="navbar">
+      <li><a href="index_v2.html">Home</a></li>
+      <li><a href="contact_v2.html">Contact</a></li>
+      <li><a href="browse_v2.html">Browse</a></li>
+      <li><a href="favorites_v2.html">Favorites</a></li>
+      
+    </ul>
+  </nav>
+
+  <div class="center-container">
+    <h1 style="color: #336699; font-family: 'Courier New', monospace;">Available Pets</h1>
+
+    <img src="/images/petgallery.jpg" alt="Pet gallery" class="fixed-img" />
+
+    <p style="transform: scale(1.1); font-weight: bold; text-align: center;">Choose your favorite pets:</p>
+
+
+    <ul class="pet-list">
+      <li><button onclick="addToFavorites('Charlie 🐶')">❤️ Charlie 🐶</button></li>
+      <li><button onclick="addToFavorites('Luna 🐱')">❤️ Luna 🐱</button></li>
+      <li><button onclick="addToFavorites('Peaches 🦜')">❤️ Peaches 🦜</button></li>
+      <li><button onclick="addToFavorites('Thumper 🐰')">❤️ Thumper 🐰</button></li>
+      <li><button onclick="addToFavorites('Daisy 🐶')">❤️ Daisy 🐶</button></li>
+    </ul>
+
+    <label for="friendliness">Level of Friendliness:</label>
+    <input type="range" id="friendliness" min="1" max="5" />
+
+    <label for="reason">Why do you want to adopt a pet?</label>
+    <textarea id="reason" placeholder="Type your reason here..."></textarea>
+
+    <br><br>
+    <button onclick="goToPage('favorites_v2.html')">Go to Favorites ❤️</button> <!-- Link to Favorites Page -->
+  </div>
+</body>
+</html>

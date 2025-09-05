@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="style_v1.css">
+  <script src="script_v1.js" defer></script>
+</head>
+<body>
+  <nav>
+    <ul class="navbar">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="browse.html">Browse</a></li>
+      <li><a href="favorites.html">Favorites</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <h1 id="contact-heading">Contact Us</h1>
+  <img src="/images/petperson.jpg" alt="Human with pet" class="main-img">
+
+  <form>
+    <label for="name">Name:</label>
+    <input type="text" id="name" placeholder="Enter your name">
+
+    <label for="phone">Phone number:</label>
+    <input type="text" id="phone" placeholder="Enter your phone number">
+
+    <p>Preferred way to be contacted:</p>
+    <label><input type="radio" name="contact" value="email" id="email"> Email</label>
+    <label><input type="radio" name="contact" value="phone" id="phoneRadio"> Phone</label>
+
+    <label><input type="checkbox" id="updates"> Receive occasional pet adoption tips via email</label>
+
+    <button type="submit" onclick="showThankYou()">Send</button>
+
+  </form>
+  <script>
+    const favs = JSON.parse(localStorage.getItem('favorites')) || [];
+    if (favs.length > 0) {
+      alert("You have saved pets in your Favorites!");
+    }
+  </script>
+  <script>
+    function showThankYou() {
+      alert("Thank you for your message! We’ll get back to you soon.");
+    }
+  </script>
+  
+</body>
+</html>

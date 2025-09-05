@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Contact Us V2</title>
+  <link rel="stylesheet" href="style_v2.css" />
+  <script src="script_v2.js" defer></script>
+</head>
+<body onload="checkFavoritesOnContact()">
+  <nav>
+    <ul class="navbar">
+      <li><a href="index_v2.html">Home</a></li>
+      <li><a href="contact_v2.html">Contact</a></li>
+      <li><a href="browse_v2.html">Browse</a></li>
+      <li><a href="favorites_v2.html">Favorites</a></li>
+      
+    </ul>
+  </nav>
+  <div class="center-container">
+    <h1 style="font-family: 'Courier New', monospace;">Contact Us</h1>
+    <img src="/images/petperson.jpg" alt="Contact" class="fixed-img" />
+
+    <form onsubmit="alert('Thank you! Your form has been submitted.'); return false;">
+      <label for="name">Name:</label>
+      <input type="text" id="name" placeholder="Enter your name" />
+
+      <label for="phone">Phone number:</label>
+      <input type="text" id="phone" placeholder="Enter your phone number" />
+
+      <p>Preferred way to be contacted:</p>
+      <input type="radio" name="contact" value="email" id="email" />
+      <label for="email">Email</label>
+      <input type="radio" name="contact" value="phone" id="phoneRadio" />
+      <label for="phoneRadio">Phone</label>
+
+      <label><input type="checkbox" id="updates" /> Receive occasional pet adoption tips via email</label>
+
+      <button type="submit">Send</button>
+      <button type="button" onclick="goToPage('browse_v2.html')">Browse Pets</button>
+    </form>
+  </div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pet Adoption - Home</title>
+  <link rel="stylesheet" href="style_v1.css">
+  <script src="script_v1.js" defer></script>
+</head>
+<body>
+  <nav>
+    <ul class="navbar">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="browse.html">Browse</a></li>
+      <li><a href="favorites.html">Favorites</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <h1 id="home-heading">Welcome to Pet Haven</h1>
+  <img src="/images/catpetimage.jpg" alt="Happy pet" class="main-img">
+
+  <label for="newsletter">Join our newsletter:</label>
+  <input type="email" id="newsletter" placeholder="Email">
+
+  <input type="checkbox" id="agree">
+  <label for="agree">I agree to the terms</label>
+
+  <p>What kind of pet do you want to adopt?</p>
+  <div class="inline-group">
+    <label><input type="radio" name="pet" value="dog" /> Dog</label>
+    <label><input type="radio" name="pet" value="cat" /> Cat</label>
+    <label><input type="radio" name="pet" value="parrot" /> Parrot</label>
+    <label><input type="radio" name="pet" value="rabbit" /> Rabbit</label>
+  </div>
+
+  <button onclick="goToPage('browse.html')">Browse Pets</button>
+</body>
+</html>

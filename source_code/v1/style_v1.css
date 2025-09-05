@@ -1,0 +1,49 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 30px;
+  background-color: #f9f9f9;
+}
+
+img.main-img {
+  width: 250px;
+  margin: 20px 0;
+}
+
+input, button, textarea {
+  display: block;
+  margin: 10px 0;
+  padding: 6px;
+  font-size: 1rem;
+}
+
+textarea {
+  width: 100%;
+}
+
+ul.pet-list {
+  list-style: disc;
+  padding-left: 30px;
+}
+
+.navbar {
+  display: flex;
+  list-style: none;
+  padding: 10px;
+  background-color: #007acc;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.navbar li {
+  margin: 0 15px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.inline-group label {
+  margin-right: 20px;
+}

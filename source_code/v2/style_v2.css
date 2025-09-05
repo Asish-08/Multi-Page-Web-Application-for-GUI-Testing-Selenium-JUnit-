@@ -1,0 +1,163 @@
+/* Reset and base layout */
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4faff;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+/* Main container */
+.center-container {
+  width: 90%;
+  max-width: 750px;
+  margin: 30px auto;
+  background-color: white;
+  padding: 20px 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  overflow-y: auto;
+}
+
+/* Navigation bar */
+nav {
+  background-color: #0077cc;
+  border-radius: 6px;
+  margin-bottom: 25px;
+}
+
+.navbar {
+  list-style-type: none;
+  margin: 0;
+  padding: 12px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.navbar li {
+  display: inline;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+}
+
+/* Headings and rotated effect */
+h1 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.rotated {
+  transform: rotate(-3deg);
+  display: inline-block;
+}
+
+/* Images */
+.fixed-img {
+  display: block;
+  margin: 0 auto 15px auto;
+  width: 250px;
+  height: auto;
+  max-height: 200px;
+  object-fit: cover;
+}
+
+/* Forms and inputs */
+label {
+  display: block;
+  margin-top: 10px;
+  font-weight: 500;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 8px 12px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+}
+
+textarea {
+  height: 100px;
+  resize: vertical;
+  background-color: #eef;
+}
+
+/* Sliders */
+input[type="range"] {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+/* Inline (radio/checkbox) */
+.inline-group {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.inline-group label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* Buttons */
+button {
+  background-color: #0077cc;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #005fa3;
+}
+
+/* Pet list */
+.pet-list {
+  list-style-type: disc;
+  list-style-position: inside;
+  text-align: left;
+  margin: 10px auto;
+  padding-left: 0;
+  width: fit-content;
+}
+
+.pet-list li {
+  font-size: 1.1rem;
+  padding: 6px 0;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .center-container {
+    padding: 15px;
+  }
+}

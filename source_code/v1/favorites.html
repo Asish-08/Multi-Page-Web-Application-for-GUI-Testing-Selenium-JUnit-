@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Favorites - Pet Haven</title>
+  <link rel="stylesheet" href="style_v1.css">
+  <script src="script_v1.js" defer></script>
+</head>
+<body>
+  <nav>
+    <ul class="navbar">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="browse.html">Browse</a></li>
+      <li><a href="favorites.html">Favorites</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <h1>My Favorite Pets</h1>
+  <img src="/images/favorites_pet.jpeg" alt="A collage of favorite pets" class="main-img">
+
+  <label for="note">Why do you like these pets?</label>
+  <input type="text" id="note" placeholder="Write a reason here...">
+
+  <div class="inline-group">
+    <p>Would you like to adopt one of them?</p>
+    <label><input type="radio" name="adopt" value="yes"> Yes</label>
+    <label><input type="radio" name="adopt" value="no"> No</label>
+  </div>
+
+  <label><input type="checkbox" id="notify"> Notify me when similar pets are added</label>
+
+  <div id="favorites-list">
+    <p>You haven't added any pets to your favorites yet.</p>
+  </div>
+
+  <button onclick="alert('Thanks for your interest!')">Submit Interest</button>
+
+  <script>
+    const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+    const container = document.getElementById('favorites-list');
+
+    if (favorites.length > 0) {
+      container.innerHTML = '<ul class="pet-list">' +
+        favorites.map(pet => `<li>${pet}</li>`).join('') +
+        '</ul>';
+      // Clear the list after showing
+      localStorage.removeItem('favorites');
+    }
+  </script>
+</body>
+</html>
